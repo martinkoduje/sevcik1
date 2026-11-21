@@ -3,12 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ševčík Foto/Video — Fotografie &amp; Video</title>
-  <meta name="description" content="Ševčík Foto/Video — momenty, portréty, hodové momenty, stužkové a video produkce." />
-  <meta property="og:title" content="Ševčík Foto/Video" />
-  <meta property="og:description" content="Nabídka služeb: momenty, portréty, hodové momenty a video." />
+  <title>Ševčík Foto/Video — Fotograf na hody, stužkové, portréty &amp; video</title>
+  <meta name="description" content="Ševčík Foto/Video — profesionální fotograf a kameraman. Focení hodů, stužkových večírků, akcí, portrétů a tvorba videí. Rychlá domluva a moderní online galerie." />
+  <meta name="keywords" content="Ševčík Foto Video, fotograf na hody, fotograf na stužkový, focení akcí, portrétní fotograf, kameraman na hody, video z akce, Zonerama Ševčík" />
+  <meta name="author" content="Ševčík Foto/Video" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#090b10" />
+
+  <!-- Favicon & ikona pro mobilní zařízení -->
+  <link rel="icon" type="image/png" href="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000408-d5bcfd5bd2/logo%201.png?ph=9ae08a6cc3" />
+  <link rel="apple-touch-icon" href="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000408-d5bcfd5bd2/logo%201.png?ph=9ae08a6cc3" />
+
+  <!-- Open Graph / Sociální sítě -->
+  <meta property="og:locale" content="cs_CZ" />
+  <meta property="og:site_name" content="Ševčík Foto/Video" />
+  <meta property="og:title" content="Ševčík Foto/Video — Fotografie &amp; Video" />
+  <meta property="og:description" content="Focení hodů, stužkových večírků, společenských akcí, portrétů a video produkce." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000625-5428254284/700/MOMENTY.jpeg?ph=9ae08a6cc3" />
+  <meta property="og:image:alt" content="Ukázka tvorby Ševčík Foto/Video" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ševčík Foto/Video — Fotografie &amp; Video" />
+  <meta name="twitter:description" content="Focení hodů, stužkových večírků, portrétů a tvorba videí." />
+  <meta name="twitter:image" content="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000625-5428254284/700/MOMENTY.jpeg?ph=9ae08a6cc3" />
+
+  <!-- Strukturovaná data Schema.org pro Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ševčík Foto/Video",
+    "description": "Fotografické a kameramanské služby: focení hodů, stužkových večírků, akcí, portrétů a střih videa.",
+    "email": "sevcik_studio@email.cz",
+    "image": "https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000625-5428254284/700/MOMENTY.jpeg?ph=9ae08a6cc3",
+    "logo": "https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000408-d5bcfd5bd2/logo%201.png?ph=9ae08a6cc3",
+    "priceRange": "1500 Kč - 10000 Kč",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Česká republika"
+    },
+    "sameAs": [
+      "https://www.facebook.com/sevcikfotograf/",
+      "https://www.instagram.com/sevcik_studio/",
+      "https://eu.zonerama.com/sevcikfoto/1350338"
+    ],
+    "knowsAbout": [
+      "Fotografování hodů",
+      "Fotografování stužkových večírků",
+      "Portrétní fotografie",
+      "Reportážní fotografie",
+      "Video produkce a střih"
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,7 +118,7 @@
       background: none;
     }
 
-    /* Jemné tekuté světlo v pozadí — nenáročné, jen transformace */
+    /* Jemné tekuté světlo v pozadí */
     .ambient-bg {
       position: fixed;
       inset: 0;
@@ -184,7 +233,7 @@
 
     .navbar {
       border-radius: 999px;
-      padding: 8px 14px 8px 14px;
+      padding: 8px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -437,7 +486,7 @@
       font-size: 0.95rem;
     }
 
-    /* Původní rozložení obrázků: 2 nahoře vedle sebe, 1 široká na šířku pod nimi */
+    /* Rozložení obrázků */
     .showcase-stack {
       display: flex;
       flex-direction: column;
@@ -525,7 +574,7 @@
       color: var(--accent);
     }
 
-    /* Akční tlačítka pod obrázky jako na původním webu */
+    /* Akční tlačítka pod obrázky */
     .cta-column {
       margin-top: 32px;
       display: flex;
@@ -813,14 +862,14 @@
   <div class="header-wrap">
     <div class="container">
       <header class="navbar">
-        <a href="#top" class="brand">
+        <a href="#top" class="brand" title="Ševčík Foto/Video — úvod">
           <span class="brand-mark">
-            <img src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000408-d5bcfd5bd2/logo%201.png?ph=9ae08a6cc3" alt="Logo Ševčík Foto/Video" />
+            <img src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000408-d5bcfd5bd2/logo%201.png?ph=9ae08a6cc3" alt="Logo Ševčík Foto/Video" width="38" height="38" />
           </span>
           <span class="brand-name">Ševčík <span>Foto/Video</span></span>
         </a>
 
-        <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+        <button type="button" class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false">☰</button>
 
         <nav aria-label="Hlavní navigace">
           <ul class="nav-list" id="navList">
@@ -836,7 +885,7 @@
   </div>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-label="Úvodní představení">
       <div class="container">
         <div class="glass hero-card reveal">
           <div class="hero-backdrop" aria-hidden="true">
@@ -859,10 +908,10 @@
       </div>
     </section>
 
-    <section id="nabidka" class="sec">
+    <section id="nabidka" class="sec" aria-labelledby="heading-nabidka">
       <div class="container">
         <div class="sec-title reveal">
-          <h2>Nabídka služeb</h2>
+          <h2 id="heading-nabidka">Nabídka fotografických služeb</h2>
           <p>Kliknutím na obrázek si ho otevřete zvětšený v náhledu.</p>
         </div>
 
@@ -872,12 +921,12 @@
               <div class="tile-frame" data-src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000625-5428254284/MOMENTY.jpeg?ph=9ae08a6cc3" data-title="Momenty">
                 <img
                   src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000625-5428254284/MOMENTY.jpeg?ph=9ae08a6cc3"
-                  alt="Momenty"
+                  alt="Momenty ze společenských akcí a stužkových večírků — Ševčík Foto/Video"
                   loading="lazy"
                 />
               </div>
               <div class="tile-bar">
-                <span class="tile-label">Momenty</span>
+                <h3 class="tile-label">Momenty</h3>
                 <div class="tile-actions">
                   <button type="button" data-src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000625-5428254284/MOMENTY.jpeg?ph=9ae08a6cc3" data-title="Momenty">Náhled</button>
                   <a href="#kontakt" data-service="Stužkový / akce">Poptat →</a>
@@ -889,12 +938,12 @@
               <div class="tile-frame" data-src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000631-521cf521d1/PORTR%C3%89TY.jpeg?ph=9ae08a6cc3" data-title="Portréty">
                 <img
                   src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000631-521cf521d1/PORTR%C3%89TY.jpeg?ph=9ae08a6cc3"
-                  alt="Portréty"
+                  alt="Portrétní fotografie v přirozeném světle — Ševčík Foto/Video"
                   loading="lazy"
                 />
               </div>
               <div class="tile-bar">
-                <span class="tile-label">Portréty</span>
+                <h3 class="tile-label">Portréty</h3>
                 <div class="tile-actions">
                   <button type="button" data-src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000631-521cf521d1/PORTR%C3%89TY.jpeg?ph=9ae08a6cc3" data-title="Portréty">Náhled</button>
                   <a href="#kontakt" data-service="Portréty">Poptat →</a>
@@ -907,12 +956,12 @@
             <div class="tile-frame" data-src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000637-cc1cacc1cd/HODOV%C3%89%20MOMENTY.jpeg?ph=9ae08a6cc3" data-title="Hodové momenty">
               <img
                 src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000637-cc1cacc1cd/HODOV%C3%89%20MOMENTY.jpeg?ph=9ae08a6cc3"
-                alt="Hodové momenty"
+                alt="Hodové momenty a reportážní focení hodů — Ševčík Foto/Video"
                 loading="lazy"
               />
             </div>
             <div class="tile-bar">
-              <span class="tile-label">Hodové momenty</span>
+              <h3 class="tile-label">Hodové momenty</h3>
               <div class="tile-actions">
                 <button type="button" data-src="https://9ae08a6cc3.cbaul-cdnwnd.com/ee02c01baf264a029cd8e60006af5fad/200000637-cc1cacc1cd/HODOV%C3%89%20MOMENTY.jpeg?ph=9ae08a6cc3" data-title="Hodové momenty">Náhled</button>
                 <a href="#kontakt" data-service="Hody">Poptat →</a>
@@ -935,10 +984,10 @@
       </div>
     </section>
 
-    <section id="video" class="sec">
+    <section id="video" class="sec" aria-label="Video produkce a informace o mně">
       <div class="container">
         <div class="grid-2">
-          <div class="glass glass-card reveal">
+          <article class="glass glass-card reveal">
             <h3>Video &amp; sestřihy</h3>
             <p>
               Natáčím akce, hody, stužkové i oslavy tak, aby video mělo spád, atmosféru a přirozené emoce.
@@ -949,9 +998,9 @@
               <li>Přehledné sdílení hotových videí</li>
             </ul>
             <a href="#kontakt" class="btn-glass btn-accent" data-service="Video produkce">Poptat video</a>
-          </div>
+          </article>
 
-          <div id="o-mne" class="glass glass-card reveal">
+          <article id="o-mne" class="glass glass-card reveal">
             <h3>O mně</h3>
             <p>
               Jsem Ševčík Foto/Video — baví mě zachytit chvíle, které se už nevrátí, ať už jde o rozjeté hody, stužkový večer nebo portrétní focení.
@@ -962,20 +1011,20 @@
               <li>Více galerií na Zoneramě, Facebooku i Instagramu</li>
             </ul>
             <a href="#kontakt" class="btn-glass">Napsat zprávu</a>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="cenik" class="sec">
+    <section id="cenik" class="sec" aria-labelledby="heading-cenik">
       <div class="container">
         <div class="sec-title reveal">
-          <h2>Ceník</h2>
+          <h2 id="heading-cenik">Ceník</h2>
           <p>Orientační ceny — finální nabídku vždy přizpůsobím rozsahu a místu konání.</p>
         </div>
 
         <div class="grid-3">
-          <div class="glass glass-card reveal">
+          <article class="glass glass-card reveal">
             <h3>Portréty</h3>
             <div class="price-tag">od 1 500 Kč <span>/ focení</span></div>
             <ul class="glass-list">
@@ -984,9 +1033,9 @@
               <li>Online galerie</li>
             </ul>
             <a href="#kontakt" class="btn-glass" data-service="Portréty">Poptat portréty</a>
-          </div>
+          </article>
 
-          <div class="glass glass-card reveal" style="border-color: rgba(248, 223, 12, 0.45);">
+          <article class="glass glass-card reveal" style="border-color: rgba(248, 223, 12, 0.45);">
             <h3>Hody &amp; akce</h3>
             <div class="price-tag">od 3 500 Kč <span>/ akce</span></div>
             <ul class="glass-list">
@@ -995,9 +1044,9 @@
               <li>Upravená galerie</li>
             </ul>
             <a href="#kontakt" class="btn-glass btn-accent" data-service="Hody">Rezervovat termín</a>
-          </div>
+          </article>
 
-          <div class="glass glass-card reveal">
+          <article class="glass glass-card reveal">
             <h3>Stužkový &amp; video</h3>
             <div class="price-tag">Dle zadání <span>/ na míru</span></div>
             <ul class="glass-list">
@@ -1006,15 +1055,15 @@
               <li>Férová domluva předem</li>
             </ul>
             <a href="#kontakt" class="btn-glass" data-service="Stužkový / akce">Získat nabídku</a>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="kontakt" class="sec">
+    <section id="kontakt" class="sec" aria-labelledby="heading-kontakt">
       <div class="container">
         <div class="sec-title reveal">
-          <h2>Kontakt</h2>
+          <h2 id="heading-kontakt">Kontakt</h2>
           <p>Máš zájem o focení nebo natáčení? Kontaktuj mě!</p>
         </div>
 
@@ -1027,7 +1076,7 @@
             <div class="glass info-tile">
               <small>Sociální sítě</small>
               <div class="btn-group" style="justify-content: flex-start; margin-top: 8px;">
-                <a href="https://www.instagram.com/sevcik_studio/?hl=cs" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Instagram">
+                <a href="https://www.instagram.com/sevcik_studio/?hl=cs" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Instagram Ševčík Studio">
                   <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -1035,7 +1084,7 @@
                   </svg>
                   Instagram
                 </a>
-                <a href="https://www.facebook.com/sevcikfotograf/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Facebook">
+                <a href="https://www.facebook.com/sevcikfotograf/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Facebook Ševčík Fotograf">
                   <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/>
                   </svg>
@@ -1068,6 +1117,8 @@
                   <option value="Stužkový / akce">Stužkový / akce</option>
                   <option value="Portréty">Portréty</option>
                   <option value="Video produkce">Video</option>
+                  <option value="Focení + Video">Focení + Video balíček</option>
+                  <option value="Jiné">Jiné</option>
                 </select>
               </div>
               <div>
@@ -1096,7 +1147,7 @@
 
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Náhled fotografie">
     <div class="glass lightbox-card">
-      <button type="button" class="lightbox-btn" id="lbClose" aria-label="Zavřít">✕</button>
+      <button type="button" class="lightbox-btn" id="lbClose" aria-label="Zavřít náhled">✕</button>
       <img id="lbImg" src="" alt="" />
       <div class="lightbox-foot">
         <strong id="lbTitle"></strong>
