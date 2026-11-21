@@ -86,7 +86,7 @@
 
     html {
       max-width: 100%;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     body {
@@ -96,8 +96,9 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       max-width: 100%;
-      overflow-x: hidden;
+      overflow-x: clip;
       position: relative;
+      padding-top: 84px;
     }
 
     img {
@@ -223,12 +224,21 @@
       transform: translateX(110%);
     }
 
-    /* Plovoucí skleněná navigace */
+    /* Plovoucí skleněná navigace — skryje se při cestě dolů, hned vyjede při posunu o kousek nahoru */
     .header-wrap {
-      position: sticky;
+      position: fixed;
       top: 12px;
+      left: 0;
+      right: 0;
       z-index: 50;
-      margin-top: 16px;
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+      will-change: transform;
+    }
+
+    .header-wrap.nav-hidden {
+      transform: translateY(calc(-100% - 20px));
+      opacity: 0;
+      pointer-events: none;
     }
 
     .navbar {
@@ -238,13 +248,13 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      background: linear-gradient(135deg, rgba(248, 223, 12, 0.2), rgba(255, 255, 255, 0.08));
+      background: linear-gradient(135deg, rgba(248, 223, 12, 0.22), rgba(14, 17, 26, 0.82));
       backdrop-filter: blur(22px) saturate(160%);
       -webkit-backdrop-filter: blur(22px) saturate(160%);
-      border: 1px solid rgba(248, 223, 12, 0.38);
+      border: 1px solid rgba(248, 223, 12, 0.42);
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.45),
-        0 14px 32px rgba(0, 0, 0, 0.4);
+        0 14px 32px rgba(0, 0, 0, 0.5);
     }
 
     .brand {
@@ -334,7 +344,7 @@
     /* Hero */
     .hero {
       position: relative;
-      padding: 44px 0 36px;
+      padding: 20px 0 36px;
     }
 
     .hero-card {
@@ -465,6 +475,7 @@
     /* Sekce */
     section.sec {
       padding: 48px 0;
+      scroll-margin-top: 84px;
     }
 
     .sec-title {
@@ -859,7 +870,7 @@
     <div class="orb orb-3"></div>
   </div>
 
-  <div class="header-wrap">
+  <div class="header-wrap" id="headerWrap">
     <div class="container">
       <header class="navbar">
         <a href="#top" class="brand" title="Ševčík Foto/Video — úvod">
@@ -1177,9 +1188,11 @@
       reveals.forEach((el) => el.classList.add('is-visible'));
     }
 
-    // Mobilní menu
+    // Mobilní menu + zobrazení lišty při jakémkoliv posunu nahoru
+    const headerWrap = document.getElementById('headerWrap');
     const burger = document.getElementById('burger');
     const navList = document.getElementById('navList');
+
     burger.addEventListener('click', () => {
       const open = navList.classList.toggle('open');
       burger.setAttribute('aria-expanded', String(open));
@@ -1190,6 +1203,23 @@
         burger.setAttribute('aria-expanded', 'false');
       });
     });
+
+    let lastY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentY = Math.max(0, window.scrollY);
+      const menuOpen = navList.classList.contains('open');
+
+      if (currentY <= 40 || menuOpen) {
+        headerWrap.classList.remove('nav-hidden');
+      } else if (currentY < lastY - 2) {
+        // Jakmile vyjedeš i jen kousek nahoru, lišta se okamžitě ukáže
+        headerWrap.classList.remove('nav-hidden');
+      } else if (currentY > lastY + 8 && currentY > 120) {
+        // Při scrollování dolů nepřekáží
+        headerWrap.classList.add('nav-hidden');
+      }
+      lastY = currentY;
+    }, { passive: true });
 
     // Předvyplnění služby
     const serviceSelect = document.getElementById('service');
